@@ -10,7 +10,7 @@ app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
 app.use(express.static(path.join(__dirname,"public"))); //to attach css file
 app.use(express.urlencoded({extended: "true"})); //for post request
-app.use(methodOverride("_method"));
+app.use(methodOverride("_method")); // delete and patch request
 
 main().then(() => {
     console.log("connection succesful");
